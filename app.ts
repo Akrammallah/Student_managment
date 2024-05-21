@@ -1,0 +1,66 @@
+class School {
+  name: string;
+ 
+  student:Student[] = [];
+ addStudent(stdObj:Student){
+this.student.push(stdObj)
+ }
+ Teachers:teachers[] = [];
+  addTeacher(tchObj:teachers){
+  this.Teachers.push(tchObj)
+   }
+
+ constructor(name:string){
+  this.name = name;
+ }
+}
+// Student veriable
+class Student {
+  name: string;
+  age: number;
+  schoolName: string;
+
+  constructor(name:string,age:number,schoolName:string){
+    this.name = name;
+    this.age = age;
+    this.schoolName = schoolName
+  }
+}
+// Teacher veriable
+class teachers extends Student{}
+
+let school1 = new School("MPS thari")
+let school2 = new School("IQRA thari")
+let school3 = new School("OXFORD thari")
+
+
+// Student
+let s1 = new Student("Faiza",15, school1.name)
+let s2 = new Student("Mutahar",13, school2.name)
+let s3 = new Student("Farman",12, school3.name)
+// Teacher
+let t1 = new teachers("GMB",24, school1.name)
+let t2 = new teachers("Tahir",22, school2.name)
+let t3 = new teachers("Mudasir",19, school3.name)
+// console.log(school1);
+//  console.log(school2);
+//  console.log(school3);
+
+school1.addStudent(s1)
+school2.addStudent(s2)
+school3.addStudent(s3)
+
+school1.addTeacher(t1)
+school2.addTeacher(t2)
+school3.addTeacher(t3)
+
+// console.log(t1);
+// console.log(t2);
+// console.log(t3);
+
+
+console.log(school1);
+console.log(school2);
+console.log(school3);
+
+
